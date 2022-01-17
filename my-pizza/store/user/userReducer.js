@@ -5,7 +5,7 @@ const initialState = {
   currentUser: {},
 };
 
-export const userReducer = (state = initialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case userActionTypes.GET_USERS:
       return {
@@ -22,3 +22,5 @@ export const userReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default userReducer;

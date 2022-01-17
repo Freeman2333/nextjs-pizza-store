@@ -1,10 +1,12 @@
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import { rootReducer } from './rootReducer';
+import { createWrapper } from 'next-redux-wrapper';
+import { reducer } from './rootReducer';
 
 const middlewares = [logger, thunk];
 
-const store = createStore(rootReducer);
+const makeStore = (context) =>
+  createStore(reducer, applyMiddleware(...middlewares));
 
-export default store;
+export const wrapper = createWrapper(makeStore, { debug: true });

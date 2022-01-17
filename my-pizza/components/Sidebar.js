@@ -5,19 +5,19 @@ import { navLinks } from '@utils/constants.js';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Sidebar = () => {
-  const router = useRouter();
-  const dispatch = useDispatch();
-  const currentUser = useSelector((state) => state.user?.currentUser);
+  // const router = useRouter();
+  // const dispatch = useDispatch();
+  // const currentUser = useSelector((state) => state.user?.currentUser);
 
-  const handleLoginClick = () => {};
+  // const handleLoginClick = () => {};
 
-  const handleLogoutClick = () => {};
+  // const handleLogoutClick = () => {};
 
-  const handleClick = (e) => {};
+  // const handleClick = (e) => {};
 
   return (
     <div className="sidebar">
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="top_nav">
           <Link href="/">
             <a className="logo">
@@ -53,7 +53,7 @@ const Sidebar = () => {
             Logout
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
